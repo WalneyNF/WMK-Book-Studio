@@ -4,7 +4,7 @@
 
 O **WMK Book Studio** é um projeto de editor de eBooks com interface visual, organização por capítulos, pré-visualização de leitura, leitura em voz alta e ferramentas de publicação.
 
-> **Estado atual:** protótipo web 0.1. Não é um diagramador profissional finalizado. Leia o [roadmap](roadmap.html) para conhecer os próximos passos.
+> **Estado atual:** protótipo web 0.1. Não é um diagramador profissional finalizado. Leia o [roadmap](roadmap.html) e a [pesquisa de mercado](pesquisa.html) para conhecer os próximos passos.
 
 ![Logotipo WMK Book Studio](assets/logo.svg)
 
@@ -22,6 +22,10 @@ O **WMK Book Studio** é um projeto de editor de eBooks com interface visual, or
 - Exemplo de livro demonstrativo.
 
 **Atenção:** compartilhamento por link só funcionará para livros efetivamente **publicados em uma URL pública**. Projetos locais do navegador não são enviados automaticamente para a internet. O botão para compartilhar um livro local usa seu texto ou um HTML exportado; a publicação online com endereço individual é um recurso futuro.
+
+## 🔎 Pesquisa de mercado
+
+A [pesquisa.html](pesquisa.html) compara Canva, Atticus, Reedsy Studio, InDesign, Kindle Create, Sigil, Calibre, Vellum, Scribus e Scrivener, com fontes oficiais e decisões de arquitetura para o WMK Book Studio. O [roadmap.html](roadmap.html) apresenta fases, critérios de aceite e riscos.
 
 ## 🚀 Como executar
 
@@ -48,6 +52,20 @@ Não é necessário instalar Node.js, Python ou bibliotecas para experimentar a 
 - A exportação HTML realiza escape do conteúdo inserido para impedir execução de HTML arbitrário.
 - Os compartilhamentos externos abrem os serviços escolhidos; não publicam automaticamente em sua conta.
 - Recursos de IA, EPUB e diagramação avançada estão planejados, não implementados.
+
+## 🪟 Aplicativo Windows offline (Tauri 2)
+
+A estrutura desktop e um workflow de compilação Windows já foram adicionados, mas o instalador ainda precisa ser validado. Para compilar localmente (Node.js LTS, Rust MSVC, Visual C++ Build Tools e WebView2):
+
+```powershell
+npm install
+npm run check:js
+npm run build:web
+npx tauri icon assets/logo.svg
+npm run desktop:build
+```
+
+O workflow `.github/workflows/windows.yml` deve produzir um instalador NSIS quando a compilação for bem-sucedida. Não há build testado nem release confirmado ainda.
 
 ## 🛠️ Arquitetura v0.1
 
