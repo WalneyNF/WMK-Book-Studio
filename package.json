@@ -1,0 +1,15 @@
+{
+  "name": "wmk-book-studio",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build:web": "node scripts/build.mjs",
+    "tauri": "tauri",
+    "desktop:build": "tauri build",
+    "check:js": "node --check app.js"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0"
+  }
+}
