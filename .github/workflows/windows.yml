@@ -1,0 +1,39 @@
+name: Windows offline — Tauri
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "src-tauri/**"
+      - "app.js"
+      - "index.html"
+      - "styles.css"
+      - "assets/**"
+      - "scripts/**"
+      - "package.json"
+      - ".github/workflows/windows.yml"
+jobs:
+  windows:
+    runs-on: windows-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri
+      - name: Instalar dependências
+        run: npm install
+      - name: Validar JavaScript
+        run: npm run check:js
+      - name: Compilar instalador Windows
+        run: npm run desktop:build
+      - name: Disponibilizar instalador para download
+        uses: actions/upload-artifact@v4
+        with:
+          name: WMK-Book-Studio-Windows
+          path: src-tauri/target/release/bundle/nsis/*-setup.exe
+          if-no-files-found: error
