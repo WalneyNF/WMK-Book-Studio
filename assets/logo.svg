@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" role="img" aria-labelledby="title desc">
+<title id="title">WMK Book Studio</title><desc id="desc">Livro aberto em degradê ciano e violeta com estrela e letras WMK Book Studio.</desc>
+<defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#26ded3"/><stop offset=".55" stop-color="#4e99ff"/><stop offset="1" stop-color="#a56cff"/></linearGradient><filter id="shadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter></defs>
+<rect x="8" y="8" width="242" height="242" rx="54" fill="#111728"/><rect x="14" y="14" width="230" height="230" rx="49" fill="none" stroke="#384660" stroke-width="2"/>
+<path d="M55 77Q100 60 128 87L128 194Q98 167 55 182Z" fill="none" stroke="url(#g)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M128 87Q158 59 203 77L203 182Q160 166 128 194Z" fill="none" stroke="url(#g)" stroke-width="11" stroke-linejoin="round"/>
+<path d="M128 94v94M68 101q24-6 43 5M68 126q23-6 43 4M147 106q19-11 42-6M147 131q19-10 42-5" stroke="#90a8ca" stroke-width="3" fill="none" opacity=".85"/>
+<path d="m185 46 5 15 15 5-15 5-5 15-5-15-15-5 15-5Z" fill="#b68aff"/><path d="m208 106 3 7 7 3-7 3-3 7-3-7-7-3 7-3Z" fill="#32e8dc"/>
+<text x="291" y="116" font-family="Arial,DejaVu Sans,sans-serif" font-weight="900" font-size="93" letter-spacing="3" fill="#e8eefb">WMK</text>
+<text x="294" y="182" font-family="Arial,DejaVu Sans,sans-serif" font-weight="700" font-size="49" letter-spacing="1" fill="#82c6ff">BOOK STUDIO</text>
+<path d="M294 208h494" stroke="url(#g)" stroke-width="5" stroke-linecap="round"/>
+</svg>
