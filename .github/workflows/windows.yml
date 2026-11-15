@@ -29,6 +29,8 @@ jobs:
         run: npm install
       - name: Validar JavaScript
         run: npm run check:js
+      - name: Gerar ícones Windows com a logo WMK
+        run: npx tauri icon assets/logo.svg
       - name: Compilar instalador Windows
         run: npm run desktop:build
       - name: Disponibilizar instalador para download
